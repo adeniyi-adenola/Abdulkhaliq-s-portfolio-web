@@ -1,5 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* ===== TOGGLER STYLE ===== */
+.nav-toggler {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-toggler span,
+.nav-toggler span::before,
+.nav-toggler span::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  background: var(--text-black-900);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggler span::before {
+  transform: translateY(-8px);
+}
+.nav-toggler span::after {
+  transform: translateY(8px);
+}
+
+/* Animate into "X" when active */
+.nav-toggler.active span {
+  background: transparent;
+}
+.nav-toggler.active span::before {
+  transform: rotate(45deg);
+}
+.nav-toggler.active span::after {
+  transform: rotate(-45deg);
+}
+
+/* ===== ASIDE TOGGLE ===== */
+.aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 270px;
+  height: 100%;
+  background: var(--bg-black-100);
+  transition: all 0.3s ease;
+  z-index: 1500;
+}
+
+.aside.open {
+  left: 0;
+}
+
+.main-content {
+  transition: padding-left 0.3s ease;
+}
+
+.main-content.shrink {
+  padding-left: 0; /* Shrinks when menu opens on small screens */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+  .aside {
+    left: -270px;
+  }
+  .aside.open {
+    left: 0;
+  }
+  .main-content {
+    padding-left: 0;
+  }
+}
+
+
+
 body {
     line-height: 1.5;
     font-size: 16px;
