@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
 /* ===== TOGGLER STYLE ===== */
 .nav-toggler {
   position: fixed;
@@ -890,7 +891,7 @@ color: var(--text-black-700);
 /* ========================
    Smartphones (max 480px)
 ======================== */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
   .main-content {
     padding: 0px;
     margin-right: -100px;
@@ -935,7 +936,7 @@ color: var(--text-black-700);
 /* ========================
    Tablets (481px - 768px)
 ======================== */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 400px) and (max-width: 768px) {
   .main-content {
     padding-left: 0;
   }
@@ -1060,7 +1061,7 @@ color: var(--text-black-700);
 }
 
 /* Extra small screens (phones <480px) */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     body {
         font-size: 14px;
     }
@@ -1096,7 +1097,7 @@ color: var(--text-black-700);
 }
 
 /* Small screens (phones ≤ 480px): show 2 info items per row */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .about .about-content .personal-info .info-item {
     flex: 0 0 50%;
     max-width: 50%;
@@ -1111,5 +1112,3 @@ color: var(--text-black-700);
   }
 
 }
-
-
