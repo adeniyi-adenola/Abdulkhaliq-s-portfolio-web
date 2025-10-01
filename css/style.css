@@ -1,27 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
-/* Tablets (≤1024px) */
-@media (max-width: 1024px) {
-  .main-container {
-    padding: 10px;
-  }
-}
-
-/* Small screens (≤768px) */
-@media (max-width: 768px) {
-  .main-container {
-    padding: 8px;
-  }
-}
-
-/* Extra small (≤480px) */
-@media (max-width: 480px) {
-  .main-container {
-    padding: 5px;
-  }
-}
-
 /* ===== TOGGLER STYLE ===== */
 .nav-toggler {
   position: fixed;
@@ -1133,4 +1111,5 @@ color: var(--text-black-700);
   }
 
 }
+
 
