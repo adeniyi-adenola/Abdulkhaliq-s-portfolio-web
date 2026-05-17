@@ -2,9 +2,10 @@
 
 html, body {
   width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
-}input, textarea, select {
-  font-size: 16px;
+  zoom: 1;
+  transform: none;
 }
 /* ===== TOGGLER STYLE ===== */
 .nav-toggler {
@@ -68,12 +69,50 @@ html, body {
 
 .main-content {
   transition: padding-left 0.3s ease;
+  padding-left: 270px;
+  width: 100%;
 }
+
 
 .main-content.shrink {
   padding-left: 0; /* Shrinks when menu opens on small screens */
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+.main-content {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home .home-info,
+  .home .home-img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .home .home-img img {
+    width: 260px;
+    margin: auto;
+  }
+
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 991px) {
   .aside {
@@ -82,9 +121,7 @@ html, body {
   .aside.open {
     left: 0;
   }
-  .main-content {
-    padding-left: 0;
-  }
+
 }
 
 
@@ -155,9 +192,7 @@ ul {
     
 }
 
-.main-content {
-    padding-left: 270px;
-}
+
 
 .padd-15 {
     padding-left: 15px;
@@ -1401,10 +1436,7 @@ h3 .my-profession {
    Smartphones (max 480px)
 ======================== */
 @media screen and (max-width: 400px) {
-  .main-content {
-    padding: 0px;
-    margin-right: -100px;
-  }
+
   .aside {
     left: -270px;
     transition: all 0.3s ease;
@@ -1426,7 +1458,7 @@ h3 .my-profession {
   .home .home-info,
   .home .home-img {
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 80%;
   }
   .home .home-img img {
     max-width: 80%;
@@ -1446,9 +1478,7 @@ h3 .my-profession {
    Tablets (481px - 768px)
 ======================== */
 @media screen and (min-width: 400px) and (max-width: 768px) {
-  .main-content {
-    padding-left: 0;
-  }
+  
   .aside {
     left: -270px;
     transition: all 0.3s ease;
@@ -1487,9 +1517,6 @@ h3 .my-profession {
    Mini PC / Small Laptops (769px - 1024px)
 ======================== */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .main-content {
-    padding-left: 220px;
-  }
   .aside {
     width: 220px;
   }
@@ -1618,6 +1645,59 @@ h3 .my-profession {
     margin-bottom: -50px;
     margin-top: 20px;
 
+  }
+
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero-inner, .nav, .sec {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .home .home-info,
+  .home .home-img {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home .home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .home-img img {
+    width: 260px;
+    max-width: 80vw;
+    height: auto;
+    object-fit: contain;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .main-content {
+    padding-left: 0;
   }
 
 }
