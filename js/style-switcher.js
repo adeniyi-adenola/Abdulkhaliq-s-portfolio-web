@@ -1,34 +1,22 @@
 /* ===============================================TOGGLE STYLE SWITCHER============================================ */
-const styleSwitcherToggler = document.querySelector(".style-switcher-toggler");
-if (styleSwitcherToggler) {
-    styleSwitcherToggler.addEventListener("click", () => {
-        const styleSwitcher = document.querySelector(".style-switcher");
-        if (styleSwitcher) {
-            styleSwitcher.classList.toggle("open");
+const SwitcherToggler = document.querySelector(".switcher-toggler");
+if (SwitcherToggler) {
+    SwitcherToggler.addEventListener("click", () => {
+        const Switcher = document.querySelector("switcher");
+        if (Switcher) {
+            Switcher.classList.toggle("open");
         }
     });
 }
 
 /* ===============================================HIDE STYLE SWITCHER ON SCROLL==================================== */
 window.addEventListener("scroll", () => {
-    const styleSwitcher = document.querySelector(".style-switcher");
-    if (styleSwitcher && styleSwitcher.classList.contains("open")) {
-        styleSwitcher.classList.remove("open");
+    const Switcher = document.querySelector(".switcher");
+    if (Switcher && styleSwitcher.classList.contains("open")) {
+        Switcher.classList.remove("open");
     }
 });
 
-/* ===============================================THEME COLORS============================================ */
-function setActivestyle(color) {
-    // Remove active class from all styles
-    let styles = document.querySelectorAll(".alternate-style");
-    styles.forEach((style) => {
-        if (style.getAttribute("title") === color) {
-            style.removeAttribute("disabled");
-        } else {
-            style.setAttribute("disabled", "true");
-        }
-    });
-}
 
 
 /* ===============================================DAY & NIGHT THEME============================================ */
